@@ -6,8 +6,24 @@
         <item name="colorOnPrimary">@color/white</item>
         <!-- Background color. -->
         <item name="backgroundColor">@color/toledo</item>
+        <!-- Text color. -->
+        <item name="android:textColor">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/backgroundColor</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.FPLAssistant.SearchView" parent="Theme.FPLAssistant">
+        <!-- Query Text Color -->
+        <item name="android:textColorPrimary">?android:textColor</item>
+        <!-- Hint Color -->
+        <item name="android:textColorHint">@color/hintColor</item>
+        <!-- Icon Color -->
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="Theme.FPLAssistant.Spinner" parent="Theme.FPLAssistant">
+        <!-- Spinner item text-->
+        <item name="android:textColor">@color/black</item>
     </style>
 </resources>

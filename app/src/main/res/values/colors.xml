@@ -3,5 +3,6 @@
     <color name="green">#02874d</color>
     <color name="toledo">#190018</color>
     <color name="black">#FF000000</color>
+    <color name="hintColor">#E1E1E1</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

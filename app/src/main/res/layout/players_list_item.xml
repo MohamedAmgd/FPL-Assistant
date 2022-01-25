@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/green_round_corners_rectangle"
+    app:cardBackgroundColor="@color/green"
+    app:cardCornerRadius="@dimen/corner_radius"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/player_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/white_round_corners_rectangle"
+                android:contentDescription="@string/player_image_desc"
+                android:paddingHorizontal="6dp"
+                android:paddingTop="6dp"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/player_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="4dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/player_value"
+                app:layout_constraintStart_toEndOf="@id/player_image"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Player name " />
+
+            <TextView
+                android:id="@+id/player_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/player_image"
+                app:layout_constraintTop_toBottomOf="@id/player_name"
+                tools:text="Midfielder" />
+
+            <TextView
+                android:id="@+id/player_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="12dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="12.7m" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/extra_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_data">
+
+            <TextView
+                android:id="@+id/player_team_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/team"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/player_team_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/player_team_title"
+                app:layout_constraintTop_toTopOf="@id/player_team_title"
+                tools:text="Liverpool" />
+
+            <TextView
+                android:id="@+id/player_owned_by_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/owned_by"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/player_team_title" />
+
+            <TextView
+                android:id="@+id/player_owned_by_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/player_owned_by_title"
+                app:layout_constraintTop_toTopOf="@id/player_owned_by_title"
+                tools:text="36.2%" />
+
+            <TextView
+                android:id="@+id/player_price_change_gw_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/price_change_game_week"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/player_owned_by_title" />
+
+            <TextView
+                android:id="@+id/player_price_change_gw_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/player_price_change_gw_title"
+                app:layout_constraintTop_toTopOf="@id/player_price_change_gw_title"
+                tools:text="0m" />
+
+            <TextView
+                android:id="@+id/player_price_change_prediction_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/price_change_prediction"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/player_price_change_gw_title" />
+
+            <TextView
+                android:id="@+id/player_price_change_prediction_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/player_price_change_prediction_title"
+                app:layout_constraintTop_toTopOf="@id/player_price_change_prediction_title"
+                tools:text="-65.5 %" />
+
+            <TextView
+                android:id="@+id/player_points_per_price_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/points_per_price"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/player_price_change_prediction_title" />
+
+            <TextView
+                android:id="@+id/player_points_per_price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/player_points_per_price_title"
+                app:layout_constraintTop_toTopOf="@id/player_points_per_price_title"
+                tools:text="13.94" />
+
+            <TextView
+                android:id="@+id/player_fixtures_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/fixtures"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/player_points_per_price_title" />
+
+            <TextView
+                android:id="@+id/player_fixtures_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/player_fixtures_title"
+                app:layout_constraintTop_toTopOf="@id/player_fixtures_title"
+                tools:text="Leicester(H) Burnley(A) Norwich(H)" />
+
+            <TextView
+                android:id="@+id/player_news_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/news"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/player_fixtures_title" />
+
+            <TextView
+                android:id="@+id/player_news_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/player_news_title"
+                app:layout_constraintTop_toTopOf="@id/player_news_title"
+                tools:text="International Duty - 75% chance of playing" />
+
+
+            <TextView
+                android:id="@+id/player_price_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/price"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@id/player_price_value"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/player_price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/player_price_title"
+                tools:text="12.7m" />
+
+            <TextView
+                android:id="@+id/player_form_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/form"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@id/player_form_value"
+                app:layout_constraintTop_toBottomOf="@id/player_price_title" />
+
+            <TextView
+                android:id="@+id/player_form_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/player_form_title"
+                tools:text="1.8" />
+
+            <TextView
+                android:id="@+id/player_status_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/status"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@id/player_status_value"
+                app:layout_constraintTop_toBottomOf="@id/player_form_title" />
+
+            <TextView
+                android:id="@+id/player_status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/player_status_title"
+                tools:text="1.8" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

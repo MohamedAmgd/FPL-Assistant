@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">FPL Assistant</string>
+    <string name="search_hint">Search for a player</string>
+    <string name="sorted_by">Sorted by</string>
+    <string name="team">Team : </string>
+    <string name="owned_by">Owned by :</string>
+    <string name="price_change_game_week">Price change game week : </string>
+    <string name="price_change_prediction">Price change prediction : </string>
+    <string name="points_per_price">Points per price : </string>
+    <string name="fixtures">Fixtures : </string>
+    <string name="news">News : </string>
+    <string name="price">Price : </string>
+    <string name="form">Form : </string>
+    <string name="status">Status : </string>
+    <string name="key">Key : </string>
+    <string name="sort_direction">Sort direction : </string>
+    <string name="min_value">Min value : </string>
+    <string name="player_value">Player value : </string>
+    <string name="max_value">Max value : </string>
+    <string name="filter_button_desc">Filter Button</string>
+    <string name="player_image_desc">Player Image</string>
+    <string name="exit_button_desc">Exit Button</string>
 </resources>

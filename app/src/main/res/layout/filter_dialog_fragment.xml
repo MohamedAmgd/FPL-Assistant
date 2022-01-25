@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/green_round_corners_rectangle"
+    android:paddingBottom="72dp">
+
+    <ImageButton
+        android:id="@+id/exit_btn"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/exit_button_desc"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player_value_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:labelFor="@id/player_value"
+        android:text="@string/player_value"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/player_value_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/player_value_frame" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/player_value_frame"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/player_value_title"
+        app:layout_constraintTop_toBottomOf="@+id/exit_btn">
+
+        <Spinner
+            android:id="@+id/player_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/Theme.FPLAssistant.Spinner"
+            tools:listitem="@android:layout/simple_list_item_1" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/min_value_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:labelFor="@id/min_value_input"
+        android:text="@string/min_value"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/min_value_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/min_value_input" />
+
+    <EditText
+        android:id="@+id/min_value_input"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints="none"
+        android:background="@drawable/white_round_corners_rectangle"
+        android:inputType="text"
+        android:paddingHorizontal="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/min_value_title"
+        app:layout_constraintTop_toBottomOf="@id/player_value_frame" />
+
+    <TextView
+        android:id="@+id/max_value_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:labelFor="@id/max_value_input"
+        android:text="@string/max_value"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/max_value_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/max_value_input" />
+
+    <EditText
+        android:id="@+id/max_value_input"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints="none"
+        android:background="@drawable/white_round_corners_rectangle"
+        android:inputType="text"
+        android:paddingHorizontal="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/max_value_title"
+        app:layout_constraintTop_toBottomOf="@id/min_value_input" />
+
+    <TextView
+        android:id="@+id/sort_dir_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:labelFor="@id/sort_dir"
+        android:text="@string/player_value"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/sort_dir_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sort_dir_frame" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sort_dir_frame"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sort_dir_title"
+        app:layout_constraintTop_toBottomOf="@id/max_value_input">
+
+        <Spinner
+            android:id="@+id/sort_dir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/Theme.FPLAssistant.Spinner"
+            tools:listitem="@android:layout/simple_list_item_1" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
