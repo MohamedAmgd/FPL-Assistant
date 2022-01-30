@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/green_round_corners_rectangle"
-    android:paddingBottom="72dp">
+    android:layout_height="match_parent"
+    android:background="@drawable/green_round_corners_rectangle">
 
     <ImageButton
         android:id="@+id/exit_btn"
@@ -41,11 +40,13 @@
         app:layout_constraintStart_toEndOf="@+id/player_value_title"
         app:layout_constraintTop_toBottomOf="@+id/exit_btn">
 
-        <Spinner
+        <androidx.appcompat.widget.AppCompatSpinner
             android:id="@+id/player_value"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:theme="@style/Theme.FPLAssistant.Spinner"
+            android:background="@drawable/bg_spinner"
+            android:dropDownWidth="match_parent"
+            android:popupBackground="@color/toledo"
             tools:listitem="@android:layout/simple_list_item_1" />
     </androidx.cardview.widget.CardView>
 
@@ -69,7 +70,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="12dp"
         android:autofillHints="none"
-        android:background="@drawable/white_round_corners_rectangle"
+        android:background="@color/toledo"
         android:inputType="text"
         android:paddingHorizontal="4dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +96,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="12dp"
         android:autofillHints="none"
-        android:background="@drawable/white_round_corners_rectangle"
+        android:background="@color/toledo"
         android:inputType="text"
         android:paddingHorizontal="4dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,8 +131,22 @@
             android:id="@+id/sort_dir"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:theme="@style/Theme.FPLAssistant.Spinner"
+            android:background="@drawable/bg_spinner"
+            android:popupBackground="@color/toledo"
             tools:listitem="@android:layout/simple_list_item_1" />
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="36dp"
+        android:backgroundTint="@color/toledo"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sort_dir_frame" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

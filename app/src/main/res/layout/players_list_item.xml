@@ -25,8 +25,8 @@
 
             <ImageView
                 android:id="@+id/player_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="72dp"
+                android:layout_height="78dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/white_round_corners_rectangle"
                 android:contentDescription="@string/player_image_desc"

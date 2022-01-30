@@ -11,6 +11,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/backgroundColor</item>
         <!-- Customize your theme here. -->
+        <item name="android:dialogTheme">@style/Theme.FPLAssistant.FilterDialog</item>
     </style>
 
     <style name="Theme.FPLAssistant.SearchView" parent="Theme.FPLAssistant">
@@ -22,8 +23,7 @@
         <item name="android:tint">@color/white</item>
     </style>
 
-    <style name="Theme.FPLAssistant.Spinner" parent="Theme.FPLAssistant">
-        <!-- Spinner item text-->
-        <item name="android:textColor">@color/black</item>
+    <style name="Theme.FPLAssistant.FilterDialog" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 </resources>
