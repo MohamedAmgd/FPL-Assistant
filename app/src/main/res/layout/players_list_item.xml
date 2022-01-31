@@ -96,6 +96,7 @@
                 android:id="@+id/player_team_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/player_team_title"
                 app:layout_constraintTop_toTopOf="@id/player_team_title"
@@ -115,6 +116,7 @@
                 android:id="@+id/player_owned_by_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/player_owned_by_title"
                 app:layout_constraintTop_toTopOf="@id/player_owned_by_title"
@@ -134,6 +136,7 @@
                 android:id="@+id/player_price_change_gw_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/player_price_change_gw_title"
                 app:layout_constraintTop_toTopOf="@id/player_price_change_gw_title"
@@ -153,6 +156,7 @@
                 android:id="@+id/player_price_change_prediction_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/player_price_change_prediction_title"
                 app:layout_constraintTop_toTopOf="@id/player_price_change_prediction_title"
@@ -172,6 +176,7 @@
                 android:id="@+id/player_points_per_price_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/player_points_per_price_title"
                 app:layout_constraintTop_toTopOf="@id/player_points_per_price_title"
@@ -189,9 +194,11 @@
 
             <TextView
                 android:id="@+id/player_fixtures_value"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/player_fixtures_title"
                 app:layout_constraintTop_toTopOf="@id/player_fixtures_title"
                 tools:text="Leicester(H) Burnley(A) Norwich(H)" />
@@ -200,27 +207,30 @@
                 android:id="@+id/player_news_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
                 android:text="@string/news"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/player_fixtures_title" />
+                app:layout_constraintTop_toTopOf="@id/player_news_value" />
+
 
             <TextView
                 android:id="@+id/player_news_value"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/player_news_title"
-                app:layout_constraintTop_toTopOf="@id/player_news_title"
+                app:layout_constraintTop_toBottomOf="@id/player_fixtures_value"
                 tools:text="International Duty - 75% chance of playing" />
-
 
             <TextView
                 android:id="@+id/player_price_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
                 android:text="@string/price"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@id/player_price_value"
@@ -241,6 +251,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
                 android:text="@string/form"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@id/player_form_value"
@@ -261,6 +272,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
                 android:text="@string/status"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@id/player_status_value"
