@@ -86,10 +86,8 @@ class FilterDialogFragment : DialogFragment() {
     private fun render(state: FilterDialogViewState) {
         when (state) {
             is FilterDialogViewState.Idle -> {
-                Toast.makeText(this.context, "Idle", Toast.LENGTH_SHORT).show()
             }
             is FilterDialogViewState.Loading -> {
-                Toast.makeText(this.context, "Loading", Toast.LENGTH_SHORT).show()
             }
             is FilterDialogViewState.InitialValues -> {
                 playerValue.setSelection(state.values.playerValueIndex)
