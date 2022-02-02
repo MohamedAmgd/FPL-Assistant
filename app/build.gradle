@@ -43,6 +43,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.6.10"
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
+    // Shimmer loading
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'

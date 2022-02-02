@@ -1,6 +1,7 @@
 package com.mohamed_amgd.fpl_assistant.ui.views
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import android.widget.SearchView
 import android.widget.Toast
@@ -10,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.mohamed_amgd.fpl_assistant.databinding.ActivityMainBinding
 import com.mohamed_amgd.fpl_assistant.ui.adapters.PlayersListAdapter
 import com.mohamed_amgd.fpl_assistant.ui.intents.MainIntent
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var searchView: SearchView
     private lateinit var filterBtn: ImageButton
     private lateinit var swipeToRefresh: SwipeRefreshLayout
+    private lateinit var shimmerLoading: ShimmerFrameLayout
     private lateinit var viewModel: MainActivityViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         searchView = binding.searchView
         filterBtn = binding.filterBtn
         swipeToRefresh = binding.swipeToRefresh
+        shimmerLoading = binding.shimmerLoadingPlayersList
 
         playersList.adapter = PlayersListAdapter(ArrayList())
         playersList.layoutManager = LinearLayoutManager(this)
@@ -72,26 +76,38 @@ class MainActivity : AppCompatActivity() {
     private fun render(state: MainViewState) {
         when (state) {
             is MainViewState.Idle -> {
-                swipeToRefresh.isRefreshing = false
+                stopLoading()
             }
             is MainViewState.Loading -> {
-                swipeToRefresh.isRefreshing = true
+                startLoading()
             }
             is MainViewState.FilterKey -> {
                 binding.sortedByValue.text = state.key
-                swipeToRefresh.isRefreshing = false
                 lifecycleScope.launch { viewModel.intentChannel.send(MainIntent.FetchPlayersList) }
             }
             is MainViewState.PlayersList -> {
+                stopLoading()
                 val playersAdapter: PlayersListAdapter = playersList.adapter as PlayersListAdapter
                 playersAdapter.updateDataSet(state.players)
-                swipeToRefresh.isRefreshing = false
             }
             is MainViewState.Error -> {
                 Toast.makeText(this, state.error, Toast.LENGTH_LONG).show()
-                swipeToRefresh.isRefreshing = false
+                stopLoading()
             }
         }
     }
 
+    private fun stopLoading() {
+        swipeToRefresh.isRefreshing = false
+        shimmerLoading.visibility = View.GONE
+        shimmerLoading.stopShimmer()
+        playersList.visibility = View.VISIBLE
+    }
+
+    private fun startLoading() {
+        swipeToRefresh.isRefreshing = false
+        shimmerLoading.visibility = View.VISIBLE
+        shimmerLoading.startShimmer()
+        playersList.visibility = View.GONE
+    }
 }
