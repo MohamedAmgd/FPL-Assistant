@@ -32,9 +32,9 @@
                 android:contentDescription="@string/player_image_desc"
                 android:paddingHorizontal="6dp"
                 android:paddingTop="6dp"
-                android:src="@mipmap/ic_launcher"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:id="@+id/player_name"

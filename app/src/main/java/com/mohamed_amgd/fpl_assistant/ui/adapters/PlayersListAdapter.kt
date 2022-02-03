@@ -1,11 +1,13 @@
 package com.mohamed_amgd.fpl_assistant.ui.adapters
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.AutoTransition
 import androidx.transition.TransitionManager
@@ -45,8 +47,6 @@ class PlayersListAdapter(private val players: ArrayList<Player>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val player: Player = players[position]
         holder.extraData.visibility = View.GONE
-
-
         holder.playerName.text = player.playerName
         holder.playerPosition.text = player.position
         holder.playerFixtures.text = player.fixtures
@@ -72,8 +72,24 @@ class PlayersListAdapter(private val players: ArrayList<Player>) :
             }
             holder.extraData.visibility = View.VISIBLE
         })
-
+        decidePlayerImageBackground(holder.playerImage, player.status)
         Glide.with(holder.itemView).load(player.imgUrl).into(holder.playerImage)
+    }
+
+    private fun decidePlayerImageBackground(playerImage: ImageView, status: String?) {
+        var imageBackground = playerImage.background
+        imageBackground = DrawableCompat.wrap(imageBackground)
+        when (status) {
+            "a" -> {
+                DrawableCompat.setTint(imageBackground, Color.WHITE)
+            }
+            "d" -> {
+                DrawableCompat.setTint(imageBackground, Color.YELLOW)
+            }
+            else -> {
+                DrawableCompat.setTint(imageBackground, Color.RED)
+            }
+        }
     }
 
     override fun getItemCount(): Int {
