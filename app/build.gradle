@@ -63,7 +63,7 @@ dependencies {
     // Firebase
     implementation platform('com.google.firebase:firebase-bom:29.1.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
-    implementation 'com.google.firebase:firebase-perf'
+    implementation 'com.google.firebase:firebase-perf-ktx'
 
     // testing
     testImplementation 'junit:junit:4.+'
