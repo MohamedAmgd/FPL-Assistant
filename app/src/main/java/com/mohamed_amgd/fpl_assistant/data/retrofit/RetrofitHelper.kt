@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitHelper {
-    private val baseUrl = "http://fpl-stats-server-production.up.railway.app/"
+    private val baseUrl = "https://fpl-stats-server.onrender.com/"
 
     fun getInstance(): ApiInterface {
         return Retrofit.Builder().baseUrl(baseUrl)
