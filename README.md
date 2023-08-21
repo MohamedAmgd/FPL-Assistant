@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  FPL Assisstant
+  FPL Assistant
 </h3>
 
 <p align="center">Android App</p>
