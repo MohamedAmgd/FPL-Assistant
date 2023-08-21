@@ -35,11 +35,11 @@
   <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>
 </p>
-<div style="text-align:center">
-
-[![Download Lastest Apk](https://custom-icon-badges.demolab.com/badge/-Download_Lastest_Apk-Grean?style=for-the-badge&logo=download&logoColor=white "Download Lastest Apk")](https://github.com/MohamedAmgd/FPL-Assistant/releases/latest/download/FPL-Assistant.apk)
-
-</div>
+<p align="center">
+  <a href="https://github.com/MohamedAmgd/FPL-Assistant/releases/latest/download/FPL-Assistant.apk">
+    <img alt="Download Lastest Apk" src="https://custom-icon-badges.demolab.com/badge/-Download_Lastest_Apk-Grean?style=for-the-badge&logo=download&logoColor=white">
+  </a>
+</p>
 
 ## 👨🏻‍💻 About the project
 
