@@ -70,9 +70,9 @@ Technologies that I used to develop this mobile client
 - [Material Design](https://m2.material.io/design)
 - [Shimmer](https://github.com/facebookarchive/shimmer-android)
 - [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
-- [Retrofit](https://kotlinlang.org/docs/coroutines-overview.html)
-- [Glide](https://kotlinlang.org/docs/coroutines-overview.html)
-- [Firebase](https://kotlinlang.org/docs/coroutines-overview.html)
+- [Retrofit](https://square.github.io/retrofit/)
+- [Glide](https://bumptech.github.io/glide/)
+- [Firebase](https://firebase.google.com/)
 
 ## 💻 Getting started
 
