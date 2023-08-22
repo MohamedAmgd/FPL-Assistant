@@ -43,7 +43,7 @@
 
 ## 👨🏻‍💻 About the project
 
-- <p style="color: red;">An Android app that shows a usefull info and stats about football players in fantasy premier league
+- <p style="color: red;">An Android app that shows a useful info and stats about football players in fantasy premier league
 - It shows for each player:-
   <ul>
 - A prediction for price change
